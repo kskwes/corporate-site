@@ -1,0 +1,8 @@
+@mixin hover($color) {
+    @include responsive(lg) {
+        &:hover, &:active, &:focus {
+            color: $color;
+            text-decoration: underline;
+        }
+    }
+}

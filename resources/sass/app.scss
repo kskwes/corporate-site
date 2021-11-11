@@ -1,0 +1,170 @@
+@import "./mixins/responsive";
+@import "./mixins/hover";
+@import "./variables/breakpoints";
+@import "./pages/news";
+@import "./parts/list";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Quicksand', 'Zen Kaku Gothic New', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+a {
+    color: #212529;
+    text-decoration: none;
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+}
+
+.header {
+    &-nav {
+        background-color: rgba(255, 255, 255, 0.8);
+
+        .navbar-toggler {
+            &:focus {
+                box-shadow: none;
+            }
+
+            &-icon {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+.title-logo {
+    display: block;
+    max-width: 240px;
+}
+
+.menu {
+    &-item {
+        @include responsive(lg) {
+            margin-left: 30px;
+        }
+    }
+}
+
+.link-text-main {
+    font-weight: 500;
+    color: #212529;
+}
+
+.link-hover {
+    @include hover($c_main);
+}
+
+.kv {
+    margin-bottom: 50px;
+
+    @include responsive(lg) {
+        margin-bottom: 100px;
+    }
+}
+
+.section {
+    padding: 35px 0;
+
+    @include responsive(lg) {
+        padding: 70px 0;
+    }
+
+    &:nth-child(even) {
+        background-color: #f4f4f4;
+    }
+
+    &-title {
+        margin-bottom: 30px;
+
+        @include responsive(lg) {
+            margin-bottom: 50px;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        &-head {
+            font-size: 3.5rem;
+            font-weight: 200;
+
+            @include responsive(lg) {
+                margin-right: 10px;
+            }
+        }
+
+        &-sub {
+            font-size: 1.4rem;
+        }
+    }
+
+    &-content {
+        &-text {
+            max-width: 440px;
+            position: relative;
+
+            &-button {
+                @include responsive(lg) {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+                }
+            }
+        }
+    }
+}
+
+.path-list {
+    @include responsive(lg) {
+        margin-top: 100px;
+    }
+    margin-top: 50px;
+}
+
+.breadcrumb {
+    &-item {
+        a {
+            color: #6c757d;
+            text-decoration: none;
+
+            @include hover($c_main);
+        }
+    }
+}
+
+.content-page {
+    @include responsive(lg) {
+        margin-top: 50px;
+    }
+    margin-top: 25px;
+}
+
+.content-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+    @include responsive(lg) {
+        font-size: 4.5rem;
+        margin-bottom: 50px;
+    }
+}
+
+.footer {
+    &-text {
+        &.copy {
+            font-size: 1.3rem;
+        }
+    }
+}

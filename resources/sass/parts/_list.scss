@@ -1,0 +1,42 @@
+.list-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-list {
+    list-style-type: none;
+    padding-left: 0;
+
+    &-item {
+        a {
+            text-decoration: none;
+            color: #212529;
+            display: block;
+        }
+
+        &-text {
+            display: block;
+        }
+
+        &-title {
+            display: block;
+        }
+
+        &-body {
+            display: block;
+        }
+
+        &-img {
+            display: block;
+            max-width: 750px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.main-list-reverse {
+    flex-direction: column-reverse !important;
+}
