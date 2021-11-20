@@ -1,6 +1,7 @@
 # コーポレートサイト
 ## 概要
-- シンプルなコーポレートサイト（ホームページ）
+- シンプルなコーポレートサイト（ホームページ） 
+- http://corporate-site-2021.herokuapp.com/corporate
 ### 環境
 - PHP (Laravel)
 - MySQL
